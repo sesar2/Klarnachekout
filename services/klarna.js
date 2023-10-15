@@ -7,11 +7,6 @@ export function getKlarnaAuth(){
     return auth
 }
 
-const total = (arr) => {
-    arr.reduce(()=>{})
-}
-
-const cartItems = [200, 300, 500, 100]
 
 
 // Skapar en order hos klarna
@@ -54,7 +49,7 @@ export async function createOrder(product) {
         merchant_urls: {
             terms: 'https://www.example.com/terms.html', 
             checkout: 'https://www.example.com/checkout.html',
-            confirmation: 'http://localhost:3000/confirmation?order_id={checkout.order.id}',
+            confirmation: 'https://myklarnacheckout-2300b124b2d8.herokuapp.com/confirmation?order_id={checkout.order.id}',
             push: 'https://www.example.com/api/push',
         }
     }
