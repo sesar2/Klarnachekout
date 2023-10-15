@@ -7,7 +7,7 @@ config()
 
 app.get('/', async (req, res)=> {
     const products = await getProducts() 
-    const markup = products.map((p)=>`<a style="display:block; color: black; border: solid 2px black; margin: 20px; padding: 10px" href="/products/${p.id}">${p.title} - ${p.price} kr</a>`).join(' ')
+    const markup = products.map((p)=>`<a style="display:block; color: black; border: solid 2px black; margin: 20px; padding: 10px" href="/test">${p.title} - ${p.price} kr</a>`).join(' ')
     res.send(markup)
 })
 
