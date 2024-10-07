@@ -26,6 +26,7 @@ app.get('/', async (req, res) => {
             max-height: 4.5em;
             font-size: 20px;
             color: black;
+            font-weight: 600;
 
                         <h3 style="margin: 0; font-size: 20px; font-weight: 900; word-wrap: break-word; max-width: 100%;">
                             ${p.title}
