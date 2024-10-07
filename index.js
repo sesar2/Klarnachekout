@@ -21,8 +21,8 @@ app.get('/', async (req, res)=> {
                         </h3>
                         <h3 style="margin: 0; font-size: 18px; color: rgba(95, 95, 95, 0.841);"> ${p.price} kr</h3>
                     </div>
-                    <a href="/products/${p.id}" style="text-decoration: none; color: black; align-self: flex-end; font-weight: bold;">
-                        <button style="border: 0.5px solid black; height: 30px; background: #FFA8CD; font-weight: bold; border-radius: 5px;">Buy now with Klarna!</button>
+                    <a href="/products/${p.id}" style="cursor: pointer; text-decoration: none; color: black; align-self: flex-end; font-weight: bold;">
+                        <button style="cursor: pointer; border: 0.5px solid black; height: 30px; background: #FFA8CD; font-weight: bold; border-radius: 5px;">Buy now with Klarna!</button>
                     </a>
                 </div>
             </div>
