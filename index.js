@@ -11,7 +11,7 @@ app.get('/', async (req, res)=> {
         <h1 style="text-align: center;">My Klarna shop </h1>
 
         <div style=" max-width: 1500px; display: flex; padding: 100px; flex-wrap: wrap; gap: 20px; font-family: Courier New, Geneva, Tahoma, sans-serif;"> ${products.map((p)=>`
-            <div style=" border: 1px solid black; height: 300px; display: flex; flex-direction: column; align-items: center; border-radius: 15px; background: rgb(235, 235, 235); width: 280px;;" >
+            <div style=" border: 1px solid black; min-height: 200px; display: flex; flex-direction: column; align-items: center; border-radius: 15px; background: rgb(235, 235, 235); width: 280px;;" >
                 <img style="min-height: 280px; width: 280px; object-fit: fill; border-radius: 15px 15px 0 0;" src="${p.image}" alt="">
                 
                 <div style="gap: 30px; display: flex; flex-direction: column; height: 100%; width: 80%; padding: 20px; justify-content: space-between;">
@@ -26,7 +26,7 @@ app.get('/', async (req, res)=> {
                     </a>
                 </div>
             </div>
-            `)}</div>
+            `).join('')}</div>
     </div>`
     res.send(markup)
 })
