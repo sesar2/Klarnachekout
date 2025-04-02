@@ -31,6 +31,11 @@ export async function createOrder(product) {
         locale: 'sv-SE',
         order_amount: total_amount,
         order_tax_amount: total_tax_amount,
+        
+        allowed_customer_types: ['person'],
+        allow_separate_shipping_address: true,
+        payment_method_categories: ['pay_now', 'pay_later', 'pay_over_time'],
+        
         order_lines: [
             {
                 type: 'physical',
@@ -44,15 +49,16 @@ export async function createOrder(product) {
                 total_discount_amount: 0,
                 total_tax_amount,
                 image_url: product.image
+                // No customer or payment config here
             }
         ],
-        payment_method_categories: ['pay_now', 'pay_later', 'pay_over_time'],
         
         merchant_urls: {
             terms: 'https://myklarnacheckout-2300b124b2d8.herokuapp.com/terms.html',
             checkout: 'https://myklarnacheckout-2300b124b2d8.herokuapp.com/checkout.html',
             confirmation: 'https://myklarnacheckout-2300b124b2d8.herokuapp.com/confirmation?order_id={checkout.order.id}',
             push: 'https://myklarnacheckout-2300b124b2d8.herokuapp.com/api/push',
+            status_callback: 'https://myklarnacheckout-2300b124b2d8.herokuapp.com/api/status'
         }
     }
 
