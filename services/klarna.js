@@ -46,26 +46,8 @@ export async function createOrder(product) {
                 image_url: product.image
             }
         ],
-        billing_address: {
-            given_name: 'Test',
-            family_name: 'Person',
-            email: 'test@example.com',
-            street_address: 'Test street 1',
-            postal_code: '12345',
-            city: 'Stockholm',
-            country: 'SE',
-            phone: '0712345678'
-        },
-        shipping_address: {
-            given_name: 'Test',
-            family_name: 'Person',
-            email: 'test@example.com',
-            street_address: 'Test street 1',
-            postal_code: '12345',
-            city: 'Stockholm',
-            country: 'SE',
-            phone: '0712345678'
-        },
+        payment_method_categories: ['pay_now', 'pay_later', 'pay_over_time'],
+        
         merchant_urls: {
             terms: 'https://myklarnacheckout-2300b124b2d8.herokuapp.com/terms.html',
             checkout: 'https://myklarnacheckout-2300b124b2d8.herokuapp.com/checkout.html',
